@@ -1,6 +1,3 @@
-brew update
-brew uninstall dbt-snowflake
-brew install dbt-snowflake
 numpy==1.23.3
 pandas==1.5.0
 plotly==5.10.0
