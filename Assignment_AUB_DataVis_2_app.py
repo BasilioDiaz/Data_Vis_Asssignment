@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # In[67]:
-
+pip freeze > requirements.txt
 pip install -r requirements.txt
 
 import pandas as pd
