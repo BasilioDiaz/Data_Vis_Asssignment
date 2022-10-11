@@ -35,22 +35,23 @@ modelTraining = st.container()
 
 
 # In[70]:
-
+option = st.sidebar.selectbox('Select account', df['EMPRESA'].drop_duplicates())
+st.write('Your account selected is:', option)
+option_2 = st.sidebar.selectbox('Now, select a bank', df['BANCO'].drop_duplicates())
+st.write('Your bank selected is:', option_2)  
+df[df['EMPRESA'].isin(option)]
+df[df['BANCO'].isin(option_2)]
 
 with header:
     st.title("Amazing Bond Portfolio Managment APP")
     st.text("With this app you can manage yours bond portafolio in a simple and easy way. Take faster and better decisions today!")
-    option = st.sidebar.selectbox('Select account', df['EMPRESA'].drop_duplicates())
-    st.write('Your account selected is:', option)
-    option_2 = st.sidebar.selectbox('Now, select a bank', df['BANCO'].drop_duplicates())
-    st.write('Your bank selected is:', option_2)  
 
 # In[71]:
 
 #df[df['EMPRESA'].isin(option)]
-df[df['EMPRESA'].str.contains(option)]
+#df[df['EMPRESA'].str.contains(option)]
 #df[df['BANCO'].isin(option_2)]
-df[df['BANCO'].str.contains(option_2)]
+#df[df['BANCO'].str.contains(option_2)]
 
 with dataset:
     st.header("Take a look of the dataset")
