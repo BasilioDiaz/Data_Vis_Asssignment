@@ -39,9 +39,9 @@ modelTraining = st.container()
 with header:
     st.title("Amazing Bond Portfolio Managment APP")
     st.text("With this app you can manage yours bond portafolio in a simple and easy way. Take faster and better decisions today!")
-    option = st.sidebar.multiselect('Select account', df['EMPRESA'].drop_duplicates())
+    option = st.sidebar.selectbox('Select account', df['EMPRESA'].drop_duplicates())
     st.write('Your account selected is:', option)
-    option_2 = st.sidebar.multiselect('Now, select a bank', df['BANCO'].drop_duplicates())
+    option_2 = st.sidebar.selectbox('Now, select a bank', df['BANCO'].drop_duplicates())
     st.write('Your bank selected is:', option_2)  
 
 # In[71]:
