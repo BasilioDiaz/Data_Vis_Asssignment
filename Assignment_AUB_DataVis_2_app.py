@@ -46,8 +46,10 @@ with header:
 
 # In[71]:
 
-df[df['EMPRESA'].isin(option)]
-df[df['BANCO'].isin(option_2)]
+#df[df['EMPRESA'].isin(option)]
+df[df['EMPRESA'].str.contains(option)]
+#df[df['BANCO'].isin(option_2)]
+df[df['BANCO'].str.contains(option_2)]
 
 with dataset:
     st.header("Take a look of the dataset")
