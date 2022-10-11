@@ -39,14 +39,14 @@ modelTraining = st.container()
 with header:
     st.title("Amazing Bond Portfolio Managment APP")
     st.text("With this app you can manage yours bond portafolio in a simple and easy way. Take faster and better decisions today!")
-    option = st.selectbox('Select account', df['EMPRESA'])
+    option = st.sidebar.selectbox('Select account', df['EMPRESA'])
     st.write('Your account selected is:', option)
-    option_2 = st.selectbox('Now, select a bank', df['BANCO'])
-    st.write('Your account selected is:', option_2)    
+    option_2 = st.sidebar.selectbox('Now, select a bank', df['BANCO'])
+    st.write('Your account selected is:', option_2)  
 
 # In[71]:
 
-df.loc[(df['EMPRESA']=option) & (df['BANCO']=option_2)]
+#df.loc[(df['EMPRESA']=option) & (df['BANCO']=option_2)]
 with dataset:
     st.header("Take a look of the dataset")
     st.text("This dataset was directly download from Bloomberg. It update automaticly daily. Amazing, right?")
