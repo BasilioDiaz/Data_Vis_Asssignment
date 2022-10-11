@@ -39,7 +39,8 @@ modelTraining = st.container()
 with header:
     st.title("Amazing Bond Portfolio Managment APP")
     st.text("With this app you can manage yours bond portafolio in a simple and easy way. Take faster and better decisions today!")
-
+    option = st.selectbox('Select account', df['EMPRESA'])
+    st.write('You selected:', option)
 
 # In[71]:
 
