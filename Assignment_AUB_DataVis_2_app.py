@@ -35,9 +35,9 @@ modelTraining = st.container()
 
 
 # In[70]:
-option = st.sidebar.selectbox('Select account', df['EMPRESA'].drop_duplicates())
+option = st.sidebar.multiselect('Select account', df['EMPRESA'].drop_duplicates())
 st.write('Your account selected is:', option)
-option_2 = st.sidebar.selectbox('Now, select a bank', df['BANCO'].drop_duplicates())
+option_2 = st.sidebar.multiselect('Now, select a bank', df['BANCO'].drop_duplicates())
 st.write('Your bank selected is:', option_2)  
 df[df['EMPRESA'].isin(option)]
 df[df['BANCO'].isin(option_2)]
