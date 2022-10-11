@@ -39,8 +39,8 @@ option = st.sidebar.multiselect('Select account', df['EMPRESA'].drop_duplicates(
 st.write('Your account selected is:', option)
 option_2 = st.sidebar.multiselect('Now, select a bank', df['BANCO'].drop_duplicates())
 st.write('Your bank selected is:', option_2)  
-df[df['EMPRESA'].isin(option)]
-df[df['BANCO'].isin(option_2)]
+df = df[df['EMPRESA'].isin(option)]
+df = df[df['BANCO'].isin(option_2)]
 
 with header:
     st.title("Amazing Bond Portfolio Managment APP")
