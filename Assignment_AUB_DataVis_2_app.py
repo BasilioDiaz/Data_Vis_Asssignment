@@ -47,8 +47,8 @@ with header:
 # In[71]:
 
 #df.loc[(df['EMPRESA']=option) & (df['BANCO']=option_2)]
-df[df['EMPRESA'] = option]
-df[df['BANCO'] = option_2]
+df[df['EMPRESA'] == option]
+df[df['BANCO'] == option_2]
 with dataset:
     st.header("Take a look of the dataset")
     st.text("This dataset was directly download from Bloomberg. It update automaticly daily. Amazing, right?")
