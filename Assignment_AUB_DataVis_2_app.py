@@ -20,6 +20,7 @@ import streamlit as st
 
 df  = pd.read_excel("Cierre 12-12-19.xlsx", header = [3] )
 df.drop('UTILIDAD', inplace=True, axis=1)
+df.drop('PERDIDA', inplace=True, axis=1)
 df['IS_EMERGING_MARKET'] = df['IS_EMERGING_MARKET'].replace({'Y': 'Emerging Market', 'N': 'Developed Market'})
 
 
