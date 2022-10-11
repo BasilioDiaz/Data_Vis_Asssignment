@@ -40,7 +40,10 @@ with header:
     st.title("Amazing Bond Portfolio Managment APP")
     st.text("With this app you can manage yours bond portafolio in a simple and easy way. Take faster and better decisions today!")
     option = st.selectbox('Select account', df['EMPRESA'])
-    st.write('You selected:', option)
+    st.write('Your account selected is:', option)
+    option_2 = st.selectbox('Now, select a bank', df['BANCO'])
+    st.write('Your account selected is:', option_2)    
+    df.loc[(df['EMPRESA']=option) & (df['BANCO']=option_2)]
 
 # In[71]:
 
